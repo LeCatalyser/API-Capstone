@@ -1,0 +1,54 @@
+*{
+	box-sizing: border-box;
+	background: #f7f7f7;
+}
+
+title{
+	
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button {
+	color: #ff8c69;
+	font-family:'Fredericka the Great', cursive;
+	border-radius: 8px;
+    top: 50%;
+    width: 20%;
+    height: 30px;
+    margin: 15px;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1{
+font-family:'Fredericka the Great', cursive;
+font-size: 40px;
+}
+
+.persisted{
+	text-decoration: line-through;
+	font-family: 'Waiting for the Sunrise', cursive;
+	color: #cce0da;
+}
+li
+{
+	text-align: center;
+	list-style: none;
+	margin: 10px;
+	width: 400px;
+	font-family:'Fredericka the Great', cursive;
+}
+/*break-point*/
+
+@media (max-width: 640px) 
+{
+	
+	
+}
