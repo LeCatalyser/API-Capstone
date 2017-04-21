@@ -32,7 +32,7 @@ var state = {//single source of truth/the brain of the operation
 		warnings:[
 			"Traveling with her family",
 			"Speaking in public",
-			"Speaking at the Unite Nations",
+			"Speaking at the United Nations",
 			"Defying the Taliban and going to school"
 		],	
 		result: 3
@@ -144,23 +144,45 @@ $(function(){
 
 });
 
-// {
-//   "batchcomplete": "",
-//   "query": {
-//     "pages": {
-//       "25568315": {
-//         "pageid": 25568315,
-//         "ns": 0,
-//         "title": "Katherine Johnson",
-//         "extract": "Katherine Coleman Goble Johnson... words words words"
-//       }
-//     }
-//   }
-// }
+
+
+var getPageId = function(data) {
+	var printOnPage = Object.keys(data.query.pages);
+	console.log(printOnPage);
+	return printOnPage[0]
+
+}
+
+var testGetPageId = function() {
+	var sampleData = {
+	  "batchcomplete": "",
+	  "query": {
+	    "pages": {
+	      "25568315": {
+	        "pageid": 25568315,
+	        "ns": 0,
+	        "title": "Katherine Johnson",
+	        "extract": "Katherine Coleman Goble Johnson... words words words"
+	      }
+	    }
+	  }
+	}
+	var pageId = getPageId(sampleData);
+	if (pageId === "25568315") {
+		console.log(`SUCCESS! Got the right page ID: "${pageId}"`);
+	}
+	else {
+		console.log(`ERROR: getPageId returned ${JSON.stringify(pageId)} instead of "25568315"`);
+	}
+}
+
+testGetPageId();
 
 var renderData = function(data, input) {
 	console.log(JSON.stringify(data, null, 2));
 	console.log(data);
+
+	$(".results").html(data.query.pages[getPageId(data)].extract)
 	// $('.results').html(data.items[0].snippet.thumbnails.default.url);//how I got at the thumbnail of the youtube result. Will do similar navigation for wikipedia. 
 	
 	// var items = data.items.map(function(item) {

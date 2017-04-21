@@ -11,6 +11,15 @@ button:hover {
   cursor: pointer;
 }
 
+.nav {
+	text-align: center;
+}
+
+main {
+	display: flex; 
+	justify-content: space-around;
+}
+
 button {
 	color: #ff8c69;
 	font-family:'Fredericka the Great', cursive;
@@ -24,12 +33,11 @@ button {
 
 .container {
   max-width: 600px;
-  float: left; 
 }
 
 .api {
   max-width: 600px;
-  float: right; 
+ 
 }
 
 h2{
