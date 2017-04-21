@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Nevertheless, She Persisted</title>
+ 
+   <link rel="stylesheet" href="api.css">
+
+ <title>Nevertheless, She Persisted</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Waiting+for+the+Sunrise" rel="stylesheet">
-  <link rel="stylesheet" href="quizapp.css">
   <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
-  </head>
+
+</head>
 <body>
+  <!--Side bar for quiz app-->
 
 <div class="container">
   <div>   
@@ -17,12 +21,23 @@
   </div>
 
 </div>
-    
 
+ <!--API Content-->
+
+<div class="api">
+<h2>Search for Women</h2>
+<form>
+	<div>
+		<input class="search" type="Text" name="">
+  		<button>Search</button>
+	</div>
+	<div class="results">Results:</div>
+</form>
+</div>
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="api.js"></script>
 
-<script src="quizapp.js"></script>
 
 </body>
 </html>

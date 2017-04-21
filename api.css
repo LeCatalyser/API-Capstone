@@ -24,10 +24,15 @@ button {
 
 .container {
   max-width: 600px;
-  margin: 0 auto;
+  float: left; 
 }
 
-h1{
+.api {
+  max-width: 600px;
+  float: right; 
+}
+
+h2{
 font-family:'Fredericka the Great', cursive;
 font-size: 40px;
 }
