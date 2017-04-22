@@ -18,7 +18,7 @@ var state = {//single source of truth/the brain of the operation
 		],
 		result:2
 	}, {
-		name: "Mary Jackson (human counter in the movie Hidden Figures)",
+		name: "Mary Jackson (engineer)",
 		warnings:[
 			"Learning math",
 			"Wearing a dress",
@@ -104,7 +104,7 @@ $("body").on("click", "button.choice-item-toggle", function provideAnswer(event)
 	 	swal("She persisted!", null, "success");
 	 }
 	 else {
-	 	swal("hmm, that's not it", null, "error");
+	 	swal("hmm, search it in wikipedia", null, "error");
 	 }
 	 state.currentQuestion += 1
 	renderList(state)
