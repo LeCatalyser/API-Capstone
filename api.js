@@ -36,6 +36,16 @@ var state = {//single source of truth/the brain of the operation
 			"Defying the Taliban and going to school"
 		],	
 		result: 3
+	},
+		{	
+		name: "May Edward Chinn",
+		warnings:[
+			"When denied an internship at the Rockefeller Institute for being black, she opened her own medical practice at home",
+			"Applying for an internship at Harlem Hospital",
+			"Pursuing her love of music",
+			"Getting married"
+		],	
+		result: 0
 	}],
 	currentQuestion: 0, 
 	correctCounter: 0 
