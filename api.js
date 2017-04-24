@@ -16,7 +16,8 @@ var state = {//single source of truth/the brain of the operation
 			"Refusing to give up her seat for a white man", 
 			"Marching"
 		],
-		result:2
+		result:2,
+		//id: "26458"
 	}, {
 		name: "Mary Jackson (engineer)",
 		warnings:[
@@ -25,17 +26,19 @@ var state = {//single source of truth/the brain of the operation
 			"Driving over the speed limit",
 			"Petitioning a Judge so she could attend classes at the all-white Hampton Highschool"
 		],
-		result: 3
+		result: 3,
+		//id:"25568315"
 	},
 		{
-		name: "Malaya Yousafzai",
+		name: "Malala Yousafzai",
 		warnings:[
 			"Traveling with her family",
 			"Speaking in public",
 			"Speaking at the United Nations",
 			"Defying the Taliban and going to school"
 		],	
-		result: 3
+		result: 3,
+		//id: "33983258"
 	},
 		{	
 		name: "May Edward Chinn",
@@ -45,7 +48,8 @@ var state = {//single source of truth/the brain of the operation
 			"Pursuing her love of music",
 			"Getting married"
 		],	
-		result: 0
+		result: 0,
+		//id: "16360566"
 	},	
 		{
 		name: "Sonia Sotomayor",
@@ -55,7 +59,8 @@ var state = {//single source of truth/the brain of the operation
 			"Ignoring accusations she only becaume a passable lawyer thansk to Title IX",
 			"Joining the Supreme court",
 		],
-		result: 2
+		result: 2,
+		//id:"2095829"
 	}], 
 	currentQuestion: 0, 
 	correctCounter: 0 
