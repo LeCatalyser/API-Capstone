@@ -1,6 +1,6 @@
 *{
 	box-sizing: border-box;
-	background: #f7f7f7;
+	background: #f2f2f2;
 }
 
 title{
@@ -15,11 +15,20 @@ button:hover {
 	text-align: center;
 	font-family: 'Special Elite', cursive;
 	font-size: 1.875em;
+	padding: 15px;
+    margin: 10px;
 
 }
 
+.intro {
+	text-align: center;
+	font-family:'Fredericka the Great', cursive;
+    padding: 10px;
+    margin: 15px;
+}
 .strong{
 	font-family:'Fredericka the Great', cursive;
+	color: #ff8c69;
 }
 
 main {

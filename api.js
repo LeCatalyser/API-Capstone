@@ -46,7 +46,17 @@ var state = {//single source of truth/the brain of the operation
 			"Getting married"
 		],	
 		result: 0
-	}],
+	},	
+		{
+		name: "Sonia Sotomayor",
+		warnings:[
+			"Attending Harvard",
+			"Visiting Puerto Rico on her school break",
+			"Ignoring accusations she only becaume a passable lawyer thansk to Title IX",
+			"Joining the Supreme court",
+		],
+		result: 2
+	}], 
 	currentQuestion: 0, 
 	correctCounter: 0 
 }
