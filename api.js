@@ -17,7 +17,6 @@ var state = {//single source of truth/the brain of the operation
 			"Marching"
 		],
 		result:2,
-		//id: "26458"
 	}, {
 		name: "Mary Jackson (engineer)",
 		warnings:[
@@ -27,7 +26,6 @@ var state = {//single source of truth/the brain of the operation
 			"Petitioning a Judge so she could attend classes at the all-white Hampton Highschool"
 		],
 		result: 3,
-		//id:"25568315"
 	},
 		{
 		name: "Malala Yousafzai",
@@ -38,7 +36,6 @@ var state = {//single source of truth/the brain of the operation
 			"Defying the Taliban and going to school"
 		],	
 		result: 3,
-		//id: "33983258"
 	},
 		{	
 		name: "May Edward Chinn",
@@ -49,7 +46,6 @@ var state = {//single source of truth/the brain of the operation
 			"Getting married"
 		],	
 		result: 0,
-		//id: "16360566"
 	},	
 		{
 		name: "Sonia Sotomayor",
@@ -60,7 +56,6 @@ var state = {//single source of truth/the brain of the operation
 			"Joining the Supreme court",
 		],
 		result: 2,
-		//id:"2095829"
 	}], 
 	currentQuestion: 0, 
 	correctCounter: 0 
@@ -73,7 +68,7 @@ var renderList = function(state) {
 	if (question === undefined) {
 
 		return $('.questions').html(`
-			Congrats!  You got ${state.correctCounter} out of ${state.items.length} correct. 
+			You got ${state.correctCounter} out of ${state.items.length} correct. 
 			<div>
 			<button class="end-button">Play Again!
         	</button>
@@ -125,13 +120,14 @@ $("body").on("click", "button.choice-item-toggle", function provideAnswer(event)
 	//if (2 == "2")
 	 if (state.items[state.currentQuestion].result == itemToCheck) {
 	 	state.correctCounter += 1
+	 	state.currentQuestion += 1
+	 	$(".results").html("")
 
 	 	swal("She persisted!", null, "success");
 	 }
 	 else {
-	 	swal("hmm, search it in wikipedia", null, "error");
+	 	swal("hmm, click the dropdown menu for more info...", null, "error");
 	 }
-	 state.currentQuestion += 1
 	renderList(state)
 }); 
 
@@ -151,7 +147,7 @@ var wikipedia_base_URL = 'https://crossorigin.me/https://en.wikipedia.org/w/api.
 $(function(){
 	$("form").submit(function(event){
 		event.preventDefault();
-		var input = $(".search").val();
+		var input = $(".select").val();
 		//format=json&action=query&prop=extracts&exintro=&explaintext=&titles=Stack%20Overflow
 		var query = {
 		    format: "json",
