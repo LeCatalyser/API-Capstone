@@ -122,6 +122,7 @@ $("body").on("click", "button.choice-item-toggle", function provideAnswer(event)
 	 	state.correctCounter += 1
 	 	state.currentQuestion += 1
 	 	$(".results").html("")
+	 	$(".select").val("choose");
 
 	 	swal("She persisted!", null, "success");
 	 }
