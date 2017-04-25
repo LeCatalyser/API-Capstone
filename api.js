@@ -156,15 +156,25 @@ $(function(){
 		    exintro: "",
 		    explaintext: "",
 		    titles: input,
-		  
+		}
+		var imageQuery = {
+			format: "json",
+		    action: "query",
+		    prop: "images",
+		    exintro: "",
+		    explaintext: "",
+		    titles: input,
+
 		}
 		$.getJSON(wikipedia_base_URL, query, function(data) {
-			renderData(data, input);
+			$.getJSON(wikipedia_base_URL, imageQuery, function(images) {
+				renderData(data, images, input);
+			});
 		});
+		
 	});
 
 });
-
 
 
 var getPageId = function(data) {
@@ -199,22 +209,12 @@ var testGetPageId = function() {
 
 testGetPageId();
 
-var renderData = function(data, input) {
-	console.log(JSON.stringify(data, null, 2));
-	console.log(data);
+var renderData = function(data, images, input) {
+	console.log(JSON.stringify(images, null, 2));
+	console.log(images);
 
 	$(".results").html(data.query.pages[getPageId(data)].extract)
-	// $('.results').html(data.items[0].snippet.thumbnails.default.url);//how I got at the thumbnail of the youtube result. Will do similar navigation for wikipedia. 
-	
-	// var items = data.items.map(function(item) {
-	// 	return 	`<a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank"><img src ="${item.snippet.thumbnails.default.url}"></a>`
-	// });
-
-	// $('.results').html(items);
-	// $('.results').html(`
-	// 	${items.join("")}
-	// `)
-	
-	//   + <a href="blank"
+	$(".results").html(data.query.pages[getPageId(data)].images)
 }
+
 
