@@ -52,7 +52,7 @@ var state = {//single source of truth/the brain of the operation
 		warnings:[
 			"Attending Harvard",
 			"Visiting Puerto Rico on her school break",
-			"Ignoring accusations she only becaume a passable lawyer thansk to Title IX",
+			"Ignoring accusations she only becaume a passable lawyer thanks to Title IX",
 			"Joining the Supreme court",
 		],
 		result: 2,
