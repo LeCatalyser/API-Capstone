@@ -61,8 +61,7 @@ var state = {//single source of truth/the brain of the operation
 	correctCounter: 0 
 }
 //Rendering
-
-//will need to make the question number dynamic. 
+ 
 var renderList = function(state) {
 	var question = state.items[state.currentQuestion]
 	if (question === undefined) {
@@ -78,7 +77,7 @@ var renderList = function(state) {
 	}
 	var name = question.name
 	var warnings = question.warnings
-	//item is always singular and index referring to which element with in the array
+	
 	var itemsHtml = warnings.map(function(item,index){
 
 		//update classes
@@ -93,7 +92,7 @@ var renderList = function(state) {
         	</li>
 	`
 	});
-//add info to render to keep track of question
+
 	var html = `
 		<div>
 			${printQuestion(name)}
@@ -110,9 +109,6 @@ var renderList = function(state) {
 }
 renderList(state)
 
-//set up event listeners 
-	//question/answer
-	//correct/incorrect response
 $("body").on("click", "button.choice-item-toggle", function provideAnswer(event){
 	var itemToCheck = $(event.currentTarget).closest("li").attr("index");
 	//checkAnswer(itemToCheck,2 )
@@ -139,7 +135,6 @@ $("body").on("click", ".end-button", function(){
 
 });
 
-
 /////////////// API CODE   ////////////////
 
 var wikipedia_base_URL = 'https://crossorigin.me/https://en.wikipedia.org/w/api.php';
@@ -165,8 +160,6 @@ $(function(){
 	});
 
 });
-
-
 
 var getPageId = function(data) {
 	var printOnPage = Object.keys(data.query.pages);
@@ -205,17 +198,6 @@ var renderData = function(data, input) {
 	console.log(data);
 
 	$(".results").html(data.query.pages[getPageId(data)].extract)
-	// $('.results').html(data.items[0].snippet.thumbnails.default.url);//how I got at the thumbnail of the youtube result. Will do similar navigation for wikipedia. 
 	
-	// var items = data.items.map(function(item) {
-	// 	return 	`<a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank"><img src ="${item.snippet.thumbnails.default.url}"></a>`
-	// });
-
-	// $('.results').html(items);
-	// $('.results').html(`
-	// 	${items.join("")}
-	// `)
-	
-	//   + <a href="blank"
 }
 
