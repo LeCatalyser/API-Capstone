@@ -1,13 +1,11 @@
 //Quiz app code. 
-
 function printQuestion(name) {
 	return `
 		<h1>${name} <span class ="persisted"> was warned. 
 		She was given an explanation.</span> Nevertheless, she persisted by:</h1>
 	`
 }
-
-var state = {//single source of truth/the brain of the operation 
+const state = {//single source of truth/the brain of the operation 
 	items: [{
 		name: "Rosa Parks", 
 		warnings: [
@@ -61,8 +59,7 @@ var state = {//single source of truth/the brain of the operation
 	correctCounter: 0 
 }
 //Rendering
- 
-var renderList = function(state) {
+const renderList = function(state) {
 	var question = state.items[state.currentQuestion]
 	if (question === undefined) {
 
@@ -73,13 +70,11 @@ var renderList = function(state) {
         	</button>
         	</div>
 		`);
-
 	}
+
 	var name = question.name
 	var warnings = question.warnings
-	
 	var itemsHtml = warnings.map(function(item,index){
-
 		//update classes
 		return `
 			<li index = ${index}> 
@@ -111,9 +106,7 @@ renderList(state)
 
 $("body").on("click", "button.choice-item-toggle", function provideAnswer(event){
 	var itemToCheck = $(event.currentTarget).closest("li").attr("index");
-	//checkAnswer(itemToCheck,2 )
 
-	//if (2 == "2")
 	 if (state.items[state.currentQuestion].result == itemToCheck) {
 	 	state.correctCounter += 1
 	 	state.currentQuestion += 1
@@ -134,11 +127,8 @@ $("body").on("click", ".end-button", function(){
  	renderList(state)
 
 });
-
 /////////////// API CODE   ////////////////
-
 var wikipedia_base_URL = 'https://crossorigin.me/https://en.wikipedia.org/w/api.php';
-
 
 $(function(){
 	$("form").submit(function(event){
