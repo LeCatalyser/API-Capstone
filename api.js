@@ -136,6 +136,14 @@ $("body").on("click", ".end-button", function(){
 /////////////// API CODE   ////////////////
 var wikipedia_base_URL = 'https://crossorigin.me/https://en.wikipedia.org/w/api.php';
 
+const getJSONPromise = (baseUrl, myQuery) => {
+  return new Promise((resolve, reject) => {
+    $.getJSON(baseUrl, myQuery, function(data) {
+      resolve(data);
+    });
+  });
+}
+
 $(() => {
   $("form").submit(function(event){
     event.preventDefault();
@@ -153,6 +161,16 @@ $(() => {
     $.getJSON(wikipedia_base_URL, query, function(data) {
       renderData(data, input);
     });
+
+    getJSONPromise(wikipedia_base_url, query).then(data => {
+      renderData(data, input);
+    })
+    // example of a promise:
+    // fetch(wikipedia_base_url, query)
+    // .then((data) => {
+    //   renderData(data, input);
+    //   return fetch(wikipedia_base_url, query);
+    // })
   });
 
 });
