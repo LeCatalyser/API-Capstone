@@ -76,8 +76,18 @@ li {
 }
 /*break-point*/
 
-@media (max-width: 640px) 
-{
-	
-	
+@media only screen and (min-width: 640px) {
+
+   {
+    /* do something to
+    over-ride default settings*/
+  }
+}
+
+@media only screen and (min-width: 800px) {
+
+   {
+    /* do something to
+    over-ride settings at previous threshold settings*/
+  }
 }
