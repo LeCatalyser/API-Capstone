@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- 
- <title>Strong Women</title>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
-  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Waiting+for+the+Sunrise" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Homemade+Apple|Love+Ya+Like+A+Sister|Special+Elite" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
-  <link rel="stylesheet" href="api.css">
+
+	<title>Strong Women</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Waiting+for+the+Sunrise" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Homemade+Apple|Love+Ya+Like+A+Sister|Special+Elite" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
+	<link rel="stylesheet" href="api.css">
+	<link rel="stylesheet" type="text/css" href="./Selectize/css/selectize.default.css">
 </head>
+
 <body>
-<nav class="nav">Here's to <span class="strong">Strong women...</span><br>
-May we celebrate them,<br>
-May we be them,<br>
-May we know them!<br></nav>   <!--Need to find font, and set it as a quote-->
-  <!--Side bar for quiz app-->
- <div class="intro">This project started as a protest to Mitch McConnel's words toward Elizabeth Warren's statements on the Senate Floor. I'm excited to use my new found coding skills to celebrate minority women who have persisted. This list of women has only begun! </div>
-<main>
-	<div class="container">
-	  <div>   
-	      <span class="restart" type="submit"></span>
-	      <li class="questions"></li>
-	  </div>
+	<nav class="nav">Here's to
+		<span class="strong">Strong women...</span>
+		<br> May we celebrate them,
+		<br> May we be them,
+		<br> May we know them!
+		<br>
+	</nav>
+	<!--Need to find font, and set it as a quote-->
+	<!--Side bar for quiz app-->
+	<div class="intro">This project started as a protest to
+		<br> Mitch McConnel's words toward Elizabeth Warren's statements on the Senate Floor.
+		<br>This list showcasing minority women has only begun! </div>
+	<main>
+		<div class="container">
+			<div>
+				<span class="restart" type="submit"></span>
+				<li class="questions"></li>
+			</div>
 
-	</div>
-
-	 <!--API Content-->
-
-	<div class="api">
-	<h2>May we know them...</h2>
-	<form>
-		<div>
-			<select class="select">
-			<option value="choose">choose a woman...</option>
-	  		<option value="Rosa Parks">Rosa Parks</option>
-	  		<option value="Mary Jackson (engineer)">Mary Jackson (engineer)</option>
-	  		<option value="Malala Yousafzai">Malala Yousafzai</option>
-	  		<option value="May Edward Chinn">May Edward Chinn</option>
-	  		<option value="Sonia Sotomayor">Sonia Sotomayor</option>
-			</select>
-	  		<button>Search</button>
 		</div>
-	</form>
-	<div class="results">
-		
-	</div>
-	</div>
-</main>
-<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-<script src="api.js"></script>
 
+		<!--API Content-->
+
+		<div class="api">
+			<h2>May we know them...</h2>
+			<form>
+				<div>
+					<select class="select">
+						<option value="choose">choose a woman...</option>
+						<option value="Rosa Parks">Rosa Parks</option>
+						<option value="Mary Jackson (engineer)">Mary Jackson (engineer)</option>
+						<option value="Malala Yousafzai">Malala Yousafzai</option>
+						<option value="May Edward Chinn">May Edward Chinn</option>
+						<option value="Sonia Sotomayor">Sonia Sotomayor</option>
+					</select>
+					<button>Search</button>
+				</div>
+			</form>
+			<div class="results">
+
+			</div>
+		</div>
+	</main>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="./Selectize/js/selectize.js"></script>
+	<script src="api.js"></script>
 
 </body>
+
 </html>

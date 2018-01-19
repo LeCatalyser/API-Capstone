@@ -1,7 +1,9 @@
 *{
 	box-sizing: border-box;
-	background: #f2f2f2;
+	background : #ffffff
+	;
 }
+
 
 button:hover {
   cursor: pointer;
@@ -17,10 +19,11 @@ button:hover {
 }
 
 .intro {
-	text-align: center;
+		font-family: 'Special Elite', cursive;
+}
+.choose {
 	font-family:'Fredericka the Great', cursive;
-    padding: 10px;
-    margin: 15px;
+	font-size: 3em;
 }
 .strong{
 	font-family:'Fredericka the Great', cursive;
@@ -42,7 +45,6 @@ button {
     margin: 15px;
 }
 
-
 .container {
   max-width: 600px;
 }
@@ -60,7 +62,7 @@ h2 {
 .persisted{
 	text-decoration: line-through;
 	font-family: 'Waiting for the Sunrise', cursive;
-	color: #cce0da;
+	color: 	#88d8b0
 }
 
 li {
@@ -73,7 +75,9 @@ li {
 /*break-point*/
 
 @media only screen and (max-width: 500px) {
-
+.head {
+	width: 100%;
+}
 .nav {
 	width: 100%;
 }
@@ -90,8 +94,9 @@ main
 
 @media only screen and (min-width: 800px) {
 
-   {
-    /* do something to
-    over-ride settings at previous threshold settings*/
-  }
+}
+@media only screen and (max-width: 500px) {
+	* {
+		width: 100%;
+	}
 }
