@@ -1,48 +1,48 @@
-*{
-	box-sizing: border-box;
-	background : #ffffff
-	;
+* {
+  box-sizing: border-box;
+  background: #ffffff;
 }
-
 
 button:hover {
   cursor: pointer;
 }
 
 .nav {
-	text-align: center;
-	font-family: 'Special Elite', cursive;
-	font-size: 1.875em;
-	padding: 15px;
-    margin: 10px;
-
+  text-align: center;
+  font-family: "Special Elite", cursive;
+  font-size: 1.875em;
+  padding: 5%;
+  margin: 5px;
 }
 
 .intro {
-		font-family: 'Special Elite', cursive;
+  font-family: "Special Elite", cursive;
+  padding: 2%;
+  text-align: center;
+  margin: 5px;
 }
 .choose {
-	font-family:'Fredericka the Great', cursive;
-	font-size: 3em;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 3em;
 }
-.strong{
-	font-family:'Fredericka the Great', cursive;
-	color: #ff8c69;
+.strong {
+  font-family: "Fredericka the Great", cursive;
+  color: #ff8c69;
 }
 
 main {
-	display: flex; 
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 button {
-	color: #ff8c69;
-	font-family:'Fredericka the Great', cursive;
-	border-radius: 8px;
-    top: 50%;
-    width: 20%;
-    height: 30px;
-    margin: 15px;
+  color: #ff8c69;
+  font-family: "Fredericka the Great", cursive;
+  border-radius: 8px;
+  top: 50%;
+  width: 20%;
+  height: 30px;
+  margin: 15px;
 }
 
 .container {
@@ -51,52 +51,53 @@ button {
 
 .api {
   max-width: 600px;
- 
 }
 
 h2 {
-	font-family:'Fredericka the Great', cursive;
-	font-size: 3em;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 3em;
 }
 
-.persisted{
-	text-decoration: line-through;
-	font-family: 'Waiting for the Sunrise', cursive;
-	color: 	#88d8b0
+.persisted {
+  text-decoration: line-through;
+  font-family: "Waiting for the Sunrise", cursive;
+  color: #88d8b0;
 }
 
 li {
-	text-align: center;
-	list-style: none;
-	margin: 10px;
-	width: 400px;
-	font-family:'Fredericka the Great', cursive;
+  text-align: center;
+  list-style: none;
+  margin: 10px;
+  width: 400px;
+  font-family: "Fredericka the Great", cursive;
+}
+
+select {
+  font-family: "Special Elite", cursive;
 }
 /*break-point*/
 
 @media only screen and (max-width: 500px) {
-.head {
-	width: 100%;
-}
-.nav {
-	width: 100%;
-}
+  .head {
+    width: 100%;
+  }
+  .nav {
+    width: 100%;
+  }
 
-h2 {
-	font-size: 3em;
-	width: 100%;
-}
-main
-{
-	display: block;
-}
+  h2 {
+    font-size: 3em;
+    width: 100%;
+  }
+  main {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 800px) {
-
 }
 @media only screen and (max-width: 500px) {
-	* {
-		width: 100%;
-	}
+  * {
+    width: 100%;
+  }
 }
